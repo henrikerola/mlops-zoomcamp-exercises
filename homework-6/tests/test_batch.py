@@ -13,7 +13,7 @@ def test_prepare_data():
     ]
 
     columns = ['PULocationID', 'DOLocationID', 'tpep_pickup_datetime', 'tpep_dropoff_datetime']
-    actual_df = batch.prepare_data(pd.DataFrame(data, columns=columns), ['PULocationID', 'DOLocationID'])
+    actual_df = batch.prepare_data(pd.DataFrame(data, columns=columns))
 
     expected_df = pd.DataFrame({
         'PULocationID': ['-1', '1', '1'], 
